@@ -35,6 +35,6 @@ COPY toradex-buster.gpg /etc/apt/trusted.gpg.d/
 
 ARG ADD_TORADEX_REPOSITORY=1
 RUN if [ "$ADD_TORADEX_REPOSITORY" = "1" ]; then \
-    echo "deb https://feeds.toradex.com/debian/testing/ buster main" >> /etc/apt/sources.list ; \
+    echo "deb https://feeds.toradex.com/debian/testing/ bullseye main" >> /etc/apt/sources.list ; \
     echo "Package: *\nPin: origin feeds.toradex.com\nPin-Priority: 900" > /etc/apt/preferences.d/toradex-feeds ; \
     fi
